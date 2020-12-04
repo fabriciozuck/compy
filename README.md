@@ -2,7 +2,7 @@ COMPY :computer:
 ------------
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
-  <img alt="Version" src="https://img.shields.io/badge/python-1.0-yellow.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/python-3.8-yellow.svg?cacheSeconds=2592000" />
 </p>
 
 ### Analisa preços de produtos de forma automatica. :computer:

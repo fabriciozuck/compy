@@ -15,7 +15,7 @@ Uso
  
  - Clone o projeto.
  ```sh
- git clone https://github.com/fabriciodearaujo/comparar-precos
+ git clone https://github.com/fabriciodearaujo/compy
  ```
  - Rode o script.
   ```sh

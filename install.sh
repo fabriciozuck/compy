@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo " Criando ambiente virtual >>>>>"
+echo "<<<<< Criando ambiente virtual >>>>>"
 python -m venv venv
 
 echo ""

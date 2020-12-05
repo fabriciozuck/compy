@@ -17,12 +17,18 @@ Uso
  ```sh
  git clone https://github.com/fabriciodearaujo/compy
  ```
- - Rode o script.
-  ```sh
- python app.py
+ - Rode o script de instalação.
+ ```sh
+ ./install.sh
  ```
-
-
+ - Ative o ambiente virtual.
+ ```sh
+ source venv/bin/activate
+ ```
+ - Execute o main.py.
+ ```sh
+ python app/main.py
+ ```
 
 LICENSE
  ------------

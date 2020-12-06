@@ -64,8 +64,7 @@ except:
     print("Não estamos no formato listagem")
 
 for prod in list_prod:
-    print(list_prod.txt)
-
+    print(list_prod)
 
 
 

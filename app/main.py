@@ -52,16 +52,19 @@ campo_pesquisa.send_keys(Keys.ENTER)
 
 try:
 
-list = drive.find_elements_by_xpath("//h2[@class="ui-search-item__title ui-search-item__group__element"]")
+list = drive.find_elements_by_xpath("//h2[@class='ui-search-item__title ui-search-item__group__element']")
 
 
 except:
     print("Não trabalhamos com thumbnail")
 
 try:
-    drive.find_elements_by_xpath("//h2[@class="ui-search-item__title"]")
+    drive.find_elements_by_xpath("//h2[@class='ui-search-item__title']")
 except:
     print("Não estamos no formato listagem")
+
+print(list)
+
 
 
 

@@ -51,9 +51,7 @@ else:
     quit()
 
 
-os_driver = 'chromedriver'
-
-drive = webdriver.Chrome(executable_path=os.getcwd()+os.sep + '/driver/'+os_driver)
+drive = webdriver.Chrome(executable_path=os.getcwd()+os.sep + "driver/chromedriver")
 drive.get(link)
 
 campo_pesquisa = drive.find_element_by_xpath(search)
@@ -72,7 +70,7 @@ try:
     list_prod = drive.find_elements_by_xpath("//h2[@class='ui-search-item__title ui-search-item__group__element']")
     list_prod2 = drive.find_elements_by_xpath("//h2[@class='ui-search-item__title']")
 except:
-    print("Não estamos no formato listagem")
+    pass    
 
 if list_prod:
    for prod in list_prod:
@@ -80,4 +78,3 @@ if list_prod:
 elif list_prod2:
      for prod in list_prod2:
          print(prod.text)
-         

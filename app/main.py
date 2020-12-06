@@ -59,13 +59,12 @@ except:
     print("Não trabalhamos com thumbnail")
 
 try:
-    drive.find_elements_by_xpath("//h2[@class='ui-search-item__title']")
+    list_prod = drive.find_elements_by_xpath("//h2[@class='ui-search-item__title']")
 except:
     print("Não estamos no formato listagem")
 
 for prod in list_prod:
-    print(list_prod)
-
+    print(prod.text)
 
 
 
@@ -81,5 +80,5 @@ for prod in list_prod:
 # //h2[@class="ui-search-item__title"]
 
 
-# tubnail 
+# thumbnail
 # //h2[@class='ui-search-item__title ui-search-item__group__element']

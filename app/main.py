@@ -7,6 +7,8 @@ print("BEM VINDO AO COMPY!!!")
 print("---------------------")
 print("(1) Mercado Livre")
 print("(2) Ali Express")
+print("(3) Lojas Americanas")
+print("(4) Casas Bahia")
 print("")
 site = int(input("-> Escolha o site que você quer pesquisar: "))
 
@@ -18,7 +20,19 @@ if site == 1:
 
 elif site == 2:
     link = "https://pt.aliexpress.com/"
-    search = "//input[@class='search-key']"
+    search = "//input[@id='search-key']"
+
+    prod = input("-> Digite o nome do produto que deseja pesquisa: ")
+
+elif site == 3:
+    link = "https://www.americanas.com.br/"
+    search = "//input[@class='src-input']"
+
+    prod = input("-> Digite o nome do produto que deseja pesquisa: ")
+
+elif site == 4:
+    link = "https://www.casasbahia.com.br/"
+    search = "//input[@id='strBusca']"
 
     prod = input("-> Digite o nome do produto que deseja pesquisa: ")
 

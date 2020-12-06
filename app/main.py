@@ -54,12 +54,12 @@ else:
 drive = webdriver.Chrome(executable_path=os.getcwd()+os.sep + "app/driver/chromedriver")
 drive.get(link)
 
-items = drive.find_elements_by_xpath(list_prod)
-
 field = drive.find_element_by_xpath(search)
 field.click()
 field.send_keys(prod)
 field.send_keys(Keys.ENTER)
+
+items = drive.find_elements_by_xpath(list_prod)
 
 for prod in items:
     print(prod.text)

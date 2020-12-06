@@ -51,7 +51,9 @@ else:
     quit()
 
 
-drive = webdriver.Chrome(executable_path=os.getcwd()+os.sep + "driver/chromedriver")
+os_driver = 'chromedriver'
+
+drive = webdriver.Chrome(executable_path=os.getcwd()+os.sep + '/driver/'+os_driver)
 drive.get(link)
 
 campo_pesquisa = drive.find_element_by_xpath(search)
@@ -60,15 +62,22 @@ campo_pesquisa.click()
 campo_pesquisa.send_keys(prod)
 campo_pesquisa.send_keys(Keys.ENTER)
 
-try:
+# try:
+#     list_prod = drive.find_elements_by_xpath("//h2[@class='ui-search-item__group__element']")
+# except:
+#     print("Não trabalhamos com thumbnail")
 
+
+try:
     list_prod = drive.find_elements_by_xpath("//h2[@class='ui-search-item__title ui-search-item__group__element']")
-except:
-    print("Não trabalhamos com thumbnail")
-
-try:
-    list_prod = drive.find_elements_by_xpath("//h2[@class='ui-search-item__title']")
+    list_prod2 = drive.find_elements_by_xpath("//h2[@class='ui-search-item__title']")
 except:
     print("Não estamos no formato listagem")
-for prod in list_prod:
-    print(prod.text)
+
+if list_prod:
+   for prod in list_prod:
+       print(prod.text)
+elif list_prod2:
+     for prod in list_prod2:
+         print(prod.text)
+         

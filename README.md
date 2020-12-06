@@ -30,6 +30,12 @@ Uso
  python app/main.py
  ```
 
+ Contribuindo
+ ------------
+ - Contribua com esse projeto com um Fork e o seu [Pull Request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
+ - Escrevendo e refatorando código.
+ - Relatando bugs. 
+
 LICENSE
  ------------
  Esse repositório usa [MIT License](/LICENSE)

@@ -8,4 +8,4 @@ echo "<<<<< Atualizando o pip >>>>>"
 pip install --upgrade pip
 
 echo "<<<<< Instalando pacotes do requirements.txt >>>>>"
-python -m pip install -r requirements.txt
+pip install -r requirements.txt

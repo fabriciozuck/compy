@@ -19,7 +19,7 @@ Uso
  ```
  - Rode o script de instalação.
  ```sh
- ./install.sh
+ ./.install.sh
  ```
  - Ative o ambiente virtual.
  ```sh

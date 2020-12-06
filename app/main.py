@@ -17,6 +17,7 @@ site = int(input("-> Escolha o site que você quer pesquisar: "))
 if site == 1:
     link = "https://mercadolivre.com.br"
     search = "//input[@class='nav-search-input']"
+    list_prod = "//h2[@class='ui-search-item__title']"
 
     prod = input("-> Digite o nome do produto que deseja pesquisa: ")
 
@@ -50,31 +51,15 @@ else:
     print("Você não selecionou nenhuma das opções.")
     quit()
 
-
-drive = webdriver.Chrome(executable_path=os.getcwd()+os.sep + "driver/chromedriver")
+drive = webdriver.Chrome(executable_path=os.getcwd()+os.sep + "app/driver/chromedriver")
 drive.get(link)
 
-campo_pesquisa = drive.find_element_by_xpath(search)
+items = drive.find_elements_by_xpath(list_prod)
 
-campo_pesquisa.click()
-campo_pesquisa.send_keys(prod)
-campo_pesquisa.send_keys(Keys.ENTER)
+field = drive.find_element_by_xpath(search)
+field.click()
+field.send_keys(prod)
+field.send_keys(Keys.ENTER)
 
-# try:
-#     list_prod = drive.find_elements_by_xpath("//h2[@class='ui-search-item__group__element']")
-# except:
-#     print("Não trabalhamos com thumbnail")
-
-
-try:
-    list_prod = drive.find_elements_by_xpath("//h2[@class='ui-search-item__title ui-search-item__group__element']")
-    list_prod2 = drive.find_elements_by_xpath("//h2[@class='ui-search-item__title']")
-except:
-    pass    
-
-if list_prod:
-   for prod in list_prod:
-       print(prod.text)
-elif list_prod2:
-     for prod in list_prod2:
-         print(prod.text)
+for prod in items:
+    print(prod.text)

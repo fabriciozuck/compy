@@ -8,7 +8,9 @@ print("---------------------")
 print("(1) Mercado Livre")
 print("(2) Ali Express")
 print("(3) Lojas Americanas")
-print("(4) Casas Bahia")
+print("(4) Amazon")
+print("(5) Magazine Luiza")
+print("(6) Kabum")
 print("")
 site = int(input("-> Escolha o site que você quer pesquisar: "))
 
@@ -31,8 +33,16 @@ elif site == 3:
     prod = input("-> Digite o nome do produto que deseja pesquisa: ")
 
 elif site == 4:
-    link = "https://www.casasbahia.com.br/"
-    search = "//input[@id='strBusca']"
+    link = "https://www.amazon.com.br/"
+    search = "//input[@class='nav-input']"
+
+elif site == 5:
+    link = "https://www.magazineluiza.com.br/"
+    search = "//input[@class='field-input-search ui-autocomplete-input']"
+
+elif site == 6:
+    link = "https://www.kabum.com.br/"
+    search = "//input[@class='sprocura']"
 
     prod = input("-> Digite o nome do produto que deseja pesquisa: ")
 
@@ -53,8 +63,6 @@ campo_pesquisa.send_keys(Keys.ENTER)
 try:
 
     list_prod = drive.find_elements_by_xpath("//h2[@class='ui-search-item__title ui-search-item__group__element']")
-
-
 except:
     print("Não trabalhamos com thumbnail")
 
@@ -62,23 +70,5 @@ try:
     list_prod = drive.find_elements_by_xpath("//h2[@class='ui-search-item__title']")
 except:
     print("Não estamos no formato listagem")
-
 for prod in list_prod:
     print(prod.text)
-
-
-
-
-
-
-
-
-
-
-
-# listagem
-# //h2[@class="ui-search-item__title"]
-
-
-# thumbnail
-# //h2[@class='ui-search-item__title ui-search-item__group__element']

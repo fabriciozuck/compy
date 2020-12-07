@@ -50,8 +50,7 @@ else:
     print("Você não selecionou nenhuma das opções.")
     quit()
 
-
-os_driver = 'chromedriver'
+os_driver = 'chromedriver.exe'
 
 drive = webdriver.Chrome(executable_path=os.getcwd()+os.sep + '/driver/'+os_driver)
 drive.get(link)
@@ -62,11 +61,11 @@ campo_pesquisa.click()
 campo_pesquisa.send_keys(prod)
 campo_pesquisa.send_keys(Keys.ENTER)
 
+
 # try:
 #     list_prod = drive.find_elements_by_xpath("//h2[@class='ui-search-item__group__element']")
 # except:
 #     print("Não trabalhamos com thumbnail")
-
 
 try:
     list_prod = drive.find_elements_by_xpath("//h2[@class='ui-search-item__title ui-search-item__group__element']")
